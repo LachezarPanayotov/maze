@@ -132,6 +132,7 @@ void right_wall_hugging(int size_row, int size_column, int maze[size_row][size_c
             printf("\n");
         }
         printf("--------------------------------------------\n");
+	sleep(1);
     }
 }
 
