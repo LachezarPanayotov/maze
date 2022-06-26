@@ -62,7 +62,7 @@ void traversal_by_user(int size_row, int size_column, char maze[size_row][size_c
                 }else if(maze[row][column + 1] == 'E'){
                     system("cls");
                     printf("Congrats! You finished the maze");
-                    exit(0);
+                    return 0;
                 }else{
                     maze[row][column] = ' ';
                     column++;
@@ -85,9 +85,7 @@ void print_maze(int size_row, int size_column, char maze[size_row][size_column])
     }
 }
 
-int main()
-{
-    char maze[10][13] = {
+char maze[10][13] = {
         {'X','X','X','X','X','X','X','X','X','X','X','X','X'},
         {' ',' ','X',' ','X',' ','X',' ',' ',' ',' ',' ','X'},
         {'X',' ','X',' ',' ',' ','X',' ','X','X','X',' ','X'},
@@ -98,8 +96,4 @@ int main()
         {'X',' ','X',' ','X','X','X',' ','X',' ','X',' ','X'},
         {'X',' ',' ',' ',' ',' ',' ',' ',' ',' ','X',' ','E'},
         {'X','X','X','X','X','X','X','X','X','X','X','X','X'}
-    };
-
-    traversal_by_user(10, 13, maze);
-    return 0;
-}
+};
