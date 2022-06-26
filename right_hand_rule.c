@@ -9,8 +9,8 @@ void right_wall_hugging(int size_row, int size_column, int maze[size_row][size_c
     int r = 1;
     int c = 1;
     maze[1][1] = 9;
-    for(int i = 0;i < size_row;i++){
-        for(int j = 0;j < size_column;j++){
+    for(int i = 0;i < 10;i++){
+        for(int j = 0;j < 13;j++){
             printf(" %d ", maze[i][j]);
         }
         printf("\n");
@@ -120,9 +120,10 @@ void right_wall_hugging(int size_row, int size_column, int maze[size_row][size_c
                 way = RIGHT;
             }
         }
-        for(int i = 0;i < size_row;i++){
-            for(int j = 0;j < size_column;j++){
-              if(maze[i][j] == 9){
+
+        for(int i = 0;i < 10;i++){
+            for(int j = 0;j < 13;j++){
+              if(maze[i][j]==9){
                 printf("{%d}", maze[i][j]);
               }else{
                 printf("-%d-" , maze[i][j]);
@@ -135,19 +136,15 @@ void right_wall_hugging(int size_row, int size_column, int maze[size_row][size_c
     }
 }
 
-int main()
-{
-    int maze[10][13] = {
-    {1,1,1,1,1,1,1,1,1,1,1,1,1},
-    {1,0,1,0,1,0,1,0,0,0,0,0,1},
-    {1,0,1,0,0,0,1,0,1,1,1,0,1},
-    {1,0,0,0,1,1,1,0,0,0,0,0,1},
-    {1,0,1,0,0,0,0,0,1,1,1,0,1},
-    {1,0,1,0,1,1,1,0,1,0,0,0,1},
-    {1,0,1,0,1,0,0,0,1,1,1,0,1},
-    {1,0,1,0,1,1,1,0,1,0,1,0,1},
-    {1,0,0,0,0,0,0,0,0,0,1,2,1},
-    {1,1,1,1,1,1,1,1,1,1,1,1,1}
-    };
-    right_wall_hugging(10, 13, maze);
-}
+int maze1[10][13] = {
+        {1,1,1,1,1,1,1,1,1,1,1,1,1},
+        {1,0,1,0,1,0,1,0,0,0,0,0,1},
+        {1,0,1,0,0,0,1,0,1,1,1,0,1},
+        {1,0,0,0,1,1,1,0,0,0,0,0,1},
+        {1,0,1,0,0,0,0,0,1,1,1,0,1},
+        {1,0,1,0,1,1,1,0,1,0,0,0,1},
+        {1,0,1,0,1,0,0,0,1,1,1,0,1},
+        {1,0,1,0,1,1,1,0,1,0,1,0,1},
+        {1,0,0,0,0,0,0,0,0,0,1,2,1},
+        {1,1,1,1,1,1,1,1,1,1,1,1,1}
+};
