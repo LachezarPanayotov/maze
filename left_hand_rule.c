@@ -2,9 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-typedef enum{DOWN,RIGHT,UP, LEFT}way;
-
-void right_wall_hugging(int size_row, int size_column, int maze[size_row][size_column]){
+void left_wall_hugging(int size_row, int size_column, int maze[size_row][size_column]){
     int way = 0;
     int r = 1;
     int c = 1;
@@ -134,9 +132,7 @@ void right_wall_hugging(int size_row, int size_column, int maze[size_row][size_c
     }
 }
 
-int main()
-{
-    int maze[10][13] = {
+int maze2[10][13] = {
     {1,1,1,1,1,1,1,1,1,1,1,1,1},
     {1,0,1,0,1,0,1,0,0,0,0,0,1},
     {1,0,1,0,0,0,1,0,1,1,1,1,1},
@@ -147,6 +143,4 @@ int main()
     {1,0,1,0,1,1,1,0,1,0,1,0,1},
     {1,0,0,0,0,0,0,0,0,0,1,2,1},
     {1,1,1,1,1,1,1,1,1,1,1,1,1}
-    };
-    right_wall_hugging(10, 13, maze);
-}
+};
